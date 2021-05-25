@@ -161,13 +161,23 @@ function playCraps(){
 }
 
 function btrCountDownTime(){
+    //loop function to reduce lines of code
     console.log("btrCountDownTimer() started");
+    // setting confirmation for debugging
     var currTime = 50
+    //setting local variable
     for(var i = 0; i <10; i++){
+        //setting for loop with three statements,
+        // I is set for 0, if I is less than 10, add 10
         setTimeout(function(){
+        //creating a function that will contain our count down
         document.getElementById("countdownStatus").innerHTML = currTime;
+        //setting currTime to be displayed instead of count down status.
         currTime = currTime - 5;
+        //setting currTime to be reduced by 5
         },1000 * i);    
+        //this is to coincide var i with the timer, 1000 = 1 second.
+        //10 seconds will coincide with currTime descending to 0
     }
     setTimeout(function(){
         document.getElementById("countdownStatus").innerHTML = "Blastoff!";

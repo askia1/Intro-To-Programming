@@ -1,135 +1,135 @@
-function countdownTimer(){
+// //function countdownTimer(){
 
-    // console.log("countdownTimer Working");
+//     // console.log("countdownTimer Working");
 
-    var currTime = 50;
+//     var currTime = 50;
 
-    // document.getElementById("countdownstatus").InnerHTML = currTime;
+//     // document.getElementById("countdownstatus").InnerHTML = currTime;
 
-    currTime = currTime - 5;
+//     currTime = currTime - 5;
 
 
 
-    // first time
+//     // first time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // second time
+//     // second time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // third time
+//     // third time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // fourth time
+//     // fourth time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // fifth time
+//     // fifth time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // sixth time
+//     // sixth time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // seventh time
+//     // seventh time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // eighth time
+//     // eighth time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // ninth time
+//     // ninth time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime); 
+//         alert("The time is "+ currTime); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
+//     }, 5000);
 
 
 
-    // tenth time
+//     // tenth time
 
-    setTimeout(function() { 
+//     setTimeout(function() { 
 
-        alert("The time is "+ currTime);
+//         alert("The time is "+ currTime);
 
-        alert("Blastoff!"); 
+//         alert("Blastoff!"); 
 
-        currTime = currTime - 5;
+//         currTime = currTime - 5;
 
-    }, 5000);
-}
+//     }, 5000);
+// }//
 var wins = 0
 function playCraps(){
     console.log("Craps game initiated");
@@ -160,26 +160,54 @@ function playCraps(){
     document.getElementById("winStatus").innerHTML = wins;
 }
 
-function btrCountDownTime(){
+function btrCountDownTime() {
     //loop function to reduce lines of code
-    console.log("btrCountDownTimer() started");
+    console.log("btrCountDownTime() started");
     // setting confirmation for debugging
     var currTime = 50
     //setting local variable
     for(var i = 0; i <10; i++){
+        if(i == 10) { 
+            setTimeout(function(){
+                document.getElementById("countdownStatus").innerHTML = "Blastoff";
+                currTime = currTime - 5;
+            },5000 * i );
+
+        } else if (i == 5) {
+            setTimeout(function() {
+                document.getElementById("countdownStatus").innerHTML = "Warning Less that 1/2 way to launch, time left = "+ currTime;
+                currTime = currTime - 5;
+                
+            },5000 * i);
+
+        } else {
+            setTimeout(function(){
+                document.getElementById("countdownStatus").innerHTML = currTime;
+                currTime = currTime -5;
+            },5000 * i);
+        }
+    }
         //setting for loop with three statements,
         // I is set for 0, if I is less than 10, add 10
-        setTimeout(function(){
+    
         //creating a function that will contain our count down
-        document.getElementById("countdownStatus").innerHTML = currTime;
+      
         //setting currTime to be displayed instead of count down status.
-        currTime = currTime - 5;
+     
         //setting currTime to be reduced by 5
-        },1000 * i);    
+           
         //this is to coincide var i with the timer, 1000 = 1 second.
         //10 seconds will coincide with currTime descending to 0
+}
+        
+    
+function sandBoxRun(){
+    console.log("SandboxRun Starts")
+    var a = 7;
+    if(a==5){
+        document.getElementById("sandboxArea").innerHTML = "a does in fact equal 5";
+        
+    }else{
+        document.getElementById("sandboxArea").innerHTML = "a does not in fact equal 5 "
     }
-    setTimeout(function(){
-        document.getElementById("countdownStatus").innerHTML = "Blastoff!";
-    }, 1000);
 }

@@ -1,135 +1,3 @@
-// //function countdownTimer(){
-
-//     // console.log("countdownTimer Working");
-
-//     var currTime = 50;
-
-//     // document.getElementById("countdownstatus").InnerHTML = currTime;
-
-//     currTime = currTime - 5;
-
-
-
-//     // first time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // second time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // third time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // fourth time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // fifth time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // sixth time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // seventh time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // eighth time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // ninth time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-
-
-
-//     // tenth time
-
-//     setTimeout(function() { 
-
-//         alert("The time is "+ currTime);
-
-//         alert("Blastoff!"); 
-
-//         currTime = currTime - 5;
-
-//     }, 5000);
-// }//
 var wins = 0
 function playCraps(){
     console.log("Craps game initiated");
@@ -166,14 +34,14 @@ function btrCountDownTime() {
     // setting confirmation for debugging
     var currTime = 50
     //setting local variable
-    for(var i = 0; i <10; i++){
+    for(var i = 0; i <11; i++){
         if(i == 10) { 
             setTimeout(function(){
                 document.getElementById("countdownStatus").innerHTML = "Blastoff";
                 currTime = currTime - 5;
             },5000 * i );
 
-        } else if (i == 5) {
+        } else if (i > 4) {
             setTimeout(function() {
                 document.getElementById("countdownStatus").innerHTML = "Warning Less that 1/2 way to launch, time left = "+ currTime;
                 currTime = currTime - 5;

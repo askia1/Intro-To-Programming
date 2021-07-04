@@ -79,3 +79,60 @@ function sandBoxRun(){
         document.getElementById("sandboxArea").innerHTML = "a does not in fact equal 5 "
     }
 }
+
+function launchFall(){
+    console.log("launchFall() running");
+    fallLaunch.launch(); 
+}
+
+class InputData{
+    constructor(
+        time_seconds,
+        latitude,
+        longitude,
+        gps_altitude,
+        bmpSensor_altitude,
+        bmpSensor_pressure,
+        bmpSensor_temp,
+        digSensor_temp,
+        cssSensor_temp,
+        cssSensor_TVOC,
+        UV,
+        accelX,
+        accelY,
+        accelZ,
+        magnetX,
+        magnetY,
+        magnetZ,
+        gyroX,
+        gyroY,
+        gyroZ,
+
+
+
+    ){
+        this.time_seconds = time_seconds;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.gps_altitude = gps_altitude ;
+        this.bmpSensor_altitude = bmpSensor_altitude ;
+        this.bmpSensor_pressure = bmpSensor_pressure ;
+        this.bmpSensor_temp = bmpSensor_temp;
+        this.digSensor_temp = digSensor_temp ;
+        this.cssSensor_temp = cssSensor_temp;
+        this.cssSensor_TVOC = cssSensor_TVOC;
+        this.UV = UV;
+        this.accelX = accelX;
+        this.accelY = accelY;
+        this.accelZ = accelZ;
+        this.magnetX = magnetX;
+        this.magnetY = magnetY;
+        this.magnetZ = magnetZ;
+        this.gyroX = gyroX;
+        this.gyroY = gyroY;
+        this.gyroZ = gyroZ ;
+
+    }
+
+
+}
